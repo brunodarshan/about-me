@@ -8,10 +8,10 @@ body {
     padding: 2rem;
   }
   
-  h1, h2, h3 {
+  h1, h2 {
     font-family: 'Playfair Display', serif;
-    color: #3C2F2F;
     margin-top: 2rem;
+    color: #3C2F2F;
   }
   
   a {
@@ -29,43 +29,39 @@ body {
     margin: 3rem 0;
   }
   
-  ul {
-    padding-left: 1.5rem;
-  }
-  
-  /* Imagem com mar – maior, responsiva */
-  img.perfil {
-    display: block;
+  /* Imagem grande no topo */
+  .hero-img {
     width: 100%;
-    max-width: 100%;
-    height: auto;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: 12px;
-    margin: 1rem 0 2rem 0;
+    margin: 1.5rem 0 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  /* Container flexível da seção de contato */
-  .contato-flex {
+  /* Grid para imagem + texto no rodapé */
+  .contato-grid {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
+    gap: 2rem;
   }
   
-  .contato-flex img {
-    max-width: 160px;
+  .contato-grid img {
+    width: 160px;
+    height: 160px;
     border-radius: 100px;
+    object-fit: cover;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
   
-  /* Responsivo para telas maiores */
-  @media (min-width: 768px) {
-    .contato-flex {
-      flex-direction: row;
-      align-items: flex-start;
-    }
+  .contato-info ul {
+    padding-left: 1.2rem;
+  }
   
-    .contato-flex img {
-      margin-top: 0.5rem;
+  @media (min-width: 768px) {
+    .contato-grid {
+      flex-direction: row;
+      align-items: center;
     }
   }
